@@ -1,0 +1,30 @@
+
+<div  class="card product-card">
+  <div style="display: block" *ngFor="let tempProduct of products"  class="card-body p-0">
+    <div class="media flex-column">
+      <div class="product-thumbnail position-relative">
+        <a href="single-product.html" tabindex="0">
+          <img class="first-img" src="{{tempProduct.imageUrl}}" alt="thumbnail">
+        </a>
+        <!-- product links -->
+        <ul class="product-links d-flex justify-content-center">
+          <li>
+            <a href="#" data-toggle="modal" data-target="#quick-view" tabindex="0">
+              <span data-toggle="tooltip" data-placement="bottom" title="" class="icon-magnifier" data-original-title="Quick view"></span>
+            </a>
+          </li>
+        </ul>
+        <!-- product links end-->
+      </div>
+      <div class="media-body">
+        <div class="product-desc">
+          <h3 class="title"><a href="shop-grid-4-column.html" tabindex="0"> {{ tempProduct.name }}</a></h3>
+          <div class="d-flex align-items-center justify-content-between">
+            <h6 class="product-price">{{tempProduct.unitPrice}} THB</h6>
+            <button class="pro-btn" data-toggle="modal" data-target="#add-to-cart" tabindex="0"><i class="icon-basket"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
