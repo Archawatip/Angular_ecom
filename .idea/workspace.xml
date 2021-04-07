@@ -5906,6 +5906,22 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
+<<<<<<< HEAD
+=======
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+>>>>>>> cd5e0b612abd97a3a7485c03d142bc5bd967a469
     <configuration name="E2E Tests (angular-ecommerce)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
