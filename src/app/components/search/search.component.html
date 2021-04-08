@@ -1,0 +1,10 @@
+<div class="form-inline position-relative">
+  <input #myInput type = "text"
+         class="form-control theme3"
+         placeholder="Enter your search key ..."
+          (keyup.enter)="doSearch(myInput.value)"
+
+  />
+  <button (click)="doSearch(myInput.value)" class="btn bg-white search-btn position-left">
+    <i class="icon-magnifier"></i></button>
+</div>
