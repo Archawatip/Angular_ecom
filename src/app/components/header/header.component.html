@@ -4,15 +4,15 @@
   <div id="sticky" class="header-top theme3 bg-dark d-none d-lg-block">
     <div class="container position-relative">
       <div class="row align-items-center">
-        <div class="col-xl-9 col-lg-8 position-xl-relative">
+        <div class="col-xl-6 col-lg-6 position-xl-relative">
           <!-- header bottom start -->
           <nav class="header-bottom">
-            <ul class="main-menu d-flex">
+            <ul class="main-menu d-flex" style="margin-bottom: 0rem;">
               <li class="active ml-0">
                 <a href="#" class="pl-0">Home</a>
               </li>
 
-                <app-product-category-menu></app-product-category-menu>
+              <app-product-category-menu></app-product-category-menu>
 
             </ul>
 
@@ -20,23 +20,11 @@
 
           <!-- header bottom end -->
         </div>
-
-        <div class="col-xl-3 col-lg-4">
-
-          <nav class="navbar-top pb-2 pb-md-0">
-
-            <ul class="d-flex justify-content-center justify-content-md-end align-items-center">
-              <li>
-                <a href="#" id="dropdown1" data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false">Setting <i class="ion ion-ios-arrow-down"></i></a>
-                <ul class="topnav-submenu dropdown-menu" aria-labelledby="dropdown1">
-                  <li><a href="myaccount.html">My account</a></li>
-                  <li><a href="checkout.html">Checkout</a></li>
-                  <li><a href="login.html">Sign out</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
+        <div class="col-xl-3 col-lg-2">
+          <app-cart-status></app-cart-status>
+        </div>
+        <div class="col-xl-2 col-lg-4">
+      <app-login-status></app-login-status>
         </div>
       </div>
     </div>

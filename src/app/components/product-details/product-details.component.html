@@ -2,19 +2,27 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6 mb-5 mb-lg-0">
-
+        <div class="position-relative">
+          <span class="badge badge-danger top-right">New</span>
+        </div>
         <div class="product-sync-init mb-20 slick-initialized slick-slider">
-          <div class="slick-list">
-            <div class="slick-track" style="opacity: 1; width: 1936px;">
-              <div class="single-product slick-slide slick-current slick-active" data-slick-index="0"
-                   aria-hidden="false" tabindex="0"
-                   style="width: 484px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;">
-                <div class="product-thumb">
-                  <img src="{{product.imageUrl}}" alt="product-thumb">
-                </div>
-              </div>
+          <div class="slick-list"><div class="slick-track" style="opacity: 1; width: 2768px;"><div class="single-product slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" style="width: 692px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;">
+            <div class="product-thumb">
+              <img src="{{ product.imageUrl }}" alt="product-thumb">
             </div>
-          </div>
+          </div><div class="single-product slick-slide" data-slick-index="1" aria-hidden="true" tabindex="-1" style="width: 692px; position: relative; left: -692px; top: 0px; z-index: 998; opacity: 0;">
+            <div class="product-thumb">
+              <img src="assets/img/single-product/2.jpg" alt="product-thumb">
+            </div>
+          </div><div class="single-product slick-slide" data-slick-index="2" aria-hidden="true" tabindex="-1" style="width: 692px; position: relative; left: -1384px; top: 0px; z-index: 998; opacity: 0;">
+            <div class="product-thumb">
+              <img src="assets/img/single-product/3.jpg" alt="product-thumb">
+            </div>
+          </div><div class="single-product slick-slide" data-slick-index="3" aria-hidden="true" tabindex="-1" style="width: 692px; position: relative; left: -2076px; top: 0px; z-index: 998; opacity: 0;">
+            <div class="product-thumb">
+              <img src="assets/img/single-product/4.jpg" alt="product-thumb">
+            </div>
+          </div></div></div>
           <!-- single-product end -->
 
           <!-- single-product end -->
@@ -23,38 +31,30 @@
 
           <!-- single-product end -->
         </div>
+
       </div>
       <div class="col-lg-6 mt-5 mt-md-0">
         <div class="single-product-info">
           <div class="single-product-head">
-            <h2 class="title mb-20">{{product.name}}</h2>
+            <h2 class="title mb-20">{{ product.name }}</h2>
           </div>
           <div class="product-body mb-40">
             <div class="d-flex align-items-center mb-30">
-              <h6 class="product-price mr-20">
-                <span class="onsale">{{product.unitPrice}} THB</span></h6>
+              <h6 class="product-price mr-20"><del class="del"></del>
+                <span class="onsale">{{ product.unitPrice | currency:'THB' }}</span></h6>
             </div>
-            <p> {{product.description}}</p>
+            <p>{{ product.description }}</p>
           </div>
           <div class="product-footer">
             <div class="product-count style d-flex flex-column flex-sm-row mt-30 mb-30">
-              <div class="count d-flex">
-                <input type="number" min="1" max="10" step="1" value="1">
-                <div class="button-group">
-                  <button class="count-btn increment"><i class="fas fa-chevron-up"></i></button>
-                  <button class="count-btn decrement"><i class="fas fa-chevron-down"></i></button>
-                </div>
-              </div>
               <div>
-                <button class="btn theme-btn--dark3 btn--xl mt-5 mt-sm-0 rounded-5">
+                <button  (click)="addToCart()" style="" class="btn theme-btn--dark3 btn--xl mt-5 mt-sm-0 rounded-5">
                   <span class="mr-2"><i class="ion-android-add"></i></span>
                   Add to cart
                 </button>
               </div>
             </div>
-            <div class="addto-whish-list">
-              <a href="#"><i class="icon-heart"></i> Add to wishlist</a>
-            </div>
+            <a routerLink="/products" class="mt-5">Back to Product List</a>
           </div>
         </div>
       </div>

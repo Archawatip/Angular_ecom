@@ -1,0 +1,14 @@
+<ul class="d-flex justify-content-center justify-content-md-end align-items-center" style="margin-bottom: 0">
+
+  <li>
+    <a *ngIf="isAuthenticated && userFullName" href="#" id="dropdown1" data-toggle="dropdown" aria-haspopup="true"
+       aria-expanded="false">{{ userFullName }}<i class="ion ion-ios-arrow-down"></i></a>
+    <ul class="topnav-submenu dropdown-menu" aria-labelledby="dropdown1">
+      <li><a *ngIf="isAuthenticated" (click)="logout()" href="#">Logout</a></li>
+      <li><a *ngIf="isAuthenticated" routerLink="/members" href="#">Member</a></li>
+      <li><a *ngIf="isAuthenticated" routerLink="/order-history" href="#">Orders</a></li>
+    </ul>
+  </li>
+</ul>
+<a *ngIf="!isAuthenticated" routerLink="/login" href="#" id="dropdown2"
+   aria-expanded="false"><i class="fas fa-user" style="margin-right: 5px"></i>Login</a>

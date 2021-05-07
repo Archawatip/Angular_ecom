@@ -10,15 +10,13 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductCategoryMenuComponent implements OnInit {
 
   productCategories: ProductCategory[];
-
+  
   constructor(private productService: ProductService) { }
 
-  // tslint:disable-next-line:typedef
   ngOnInit() {
     this.listProductCategories();
   }
 
-  // tslint:disable-next-line:typedef
   listProductCategories() {
 
     this.productService.getProductCategories().subscribe(
